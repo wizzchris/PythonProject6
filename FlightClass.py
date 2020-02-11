@@ -3,13 +3,14 @@ import random
 
 class Flight:
 
-    def __init__(self,aircraft, origin, desitnation, date_time, customers = []):
+    def __init__(self,aircraft, origin, desitnation, date_time, customers = None):
+        if customers is None:
+            self.customers = []
         self.aircraft = aircraft
         self.destination = desitnation
         self.origin = origin
         self.flight_num = ''
         self.date_time = date_time
-        self.customers = customers
 
 
     def assign_plane(self,list_of_planes):

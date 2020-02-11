@@ -18,20 +18,14 @@ class Customer(People):
         self.__passport = ''
         self.destination = destination
 
-    def assign_plane(self,flight_list):
-        for flight in flight_list:
-            if flight.destination == self.destination:
-                flight.customers.append(self)
-
-
-
-
     def set_passport(self,passport_number):
         self.__passport = passport_number
         return self.__passport
 
 
-    def force_assign_plane(self, destination_choice, flight_list):
+    def assign_flight(self, flight_list):
         for flight in flight_list:
-            if flight.destination == destination_choice:
+            if self.destination == flight.destination:
                 flight.customers.append(self)
+
+

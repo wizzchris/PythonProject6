@@ -15,10 +15,3 @@ class Plane(Aircraft):
 
 
 
-
-class Heliecopter(Aircraft):
-    def __init__(self,capacity, size_of_fuel_tank, num_of_blades, taken = 'no'):
-        super().__init__(capacity,size_of_fuel_tank, taken)
-        self.num_of_blades = num_of_blades
-
-
